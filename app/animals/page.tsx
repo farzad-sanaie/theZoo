@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getAnimals } from "../services/animalService";
 import { Animal } from "../models/Animal";
+import { Animals } from "../components/Animals";
 
 export default function AnimalPage() {
   const [animals, setAnimals] = useState<Animal[]>([]);
@@ -18,14 +19,7 @@ export default function AnimalPage() {
   return (
     <>
       <h1>Våra djur</h1>
-      <section>
-        {animals.map((animal) => (
-          <article key={animal.id}>
-            <h2>{animal.name}</h2>
-            <p>{animal.shortDescription}</p>
-          </article>
-        ))}
-      </section>
+      <Animals animals={animals} />
     </>
   );
 }
