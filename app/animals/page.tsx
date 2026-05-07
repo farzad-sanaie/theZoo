@@ -13,8 +13,9 @@ export default function AnimalPage() {
       const data = await getAnimals();
       setAnimals(data);
     };
+
     getData();
-  });
+  }, []);
 
   return (
     <>
