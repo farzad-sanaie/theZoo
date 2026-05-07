@@ -1,4 +1,5 @@
 import { Animal } from "../models/Animal";
+import { AminalCard } from "./AnimalCard";
 
 type AnimalProps = {
   animals: Animal[];
@@ -9,7 +10,7 @@ export const Animals = ({ animals }: AnimalProps) => {
     <section>
       {animals.map((animal) => (
         <article key={animal.id}>
-          <h2>{animal.name}</h2>
+          <AminalCard animal={animal} key={animal.id} />
         </article>
       ))}
     </section>
