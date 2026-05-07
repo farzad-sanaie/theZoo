@@ -18,7 +18,14 @@ export default function AnimalPage() {
   return (
     <>
       <h1>Våra djur</h1>
-      <div>{animals.length}</div>
+      <section>
+        {animals.map((animal) => (
+          <article key={animal.id}>
+            <h2>{animal.name}</h2>
+            <p>{animal.shortDescription}</p>
+          </article>
+        ))}
+      </section>
     </>
   );
 }
