@@ -4,7 +4,7 @@ type AnimalProps = {
   animals: Animal[];
 };
 
-export const Animals = ({ animals }: AnimalsProps) => {
+export const Animals = ({ animals }: AnimalProps) => {
   return (
     <section>
       {animals.map((animal) => (
