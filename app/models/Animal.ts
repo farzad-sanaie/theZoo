@@ -8,5 +8,5 @@ export type Animal = {
     imageUrl: string;
     medicine: string;
     isFed: boolean;
-    lastFed: boolean;
+    lastFed: string;
 }
