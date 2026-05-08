@@ -11,7 +11,7 @@ export const AminalCard = ({ animal }: AnimalCardProps) => {
       <article>
         <h2>{animal.name}</h2>
         <p>{animal.shortDescription}</p>
-        <Link href={`/animal/${animal.id}`}>Läs mer</Link>
+        <Link href={`/animals/${animal.id}`}>Läs mer</Link>
       </article>
     </>
   );

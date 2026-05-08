@@ -6,7 +6,7 @@ export type Animal = {
     shortDescription: string;
     longDescription: string;
     imageUrl: string;
-    medicine: string:
+    medicine: string;
     isFed: boolean;
     lastFed: boolean;
 }
