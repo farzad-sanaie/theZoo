@@ -47,19 +47,20 @@ const AnimalDetails = () => {
   }
 
   return (
-    <article>
-      <h1>{animal.name}</h1>
+    <article className="border border-grey-100 flex flex-col rounded gap-8">
+      <h1 className="text-4xl font-bold">{animal.name}</h1>
       <p>{animal.longDescription}</p>
       <p>
         {animal.isFed
-          ? `Matad: ${new Date(animal.lastFed).toLocaleString()}`
-          : "Inte matad ännu"}
+          ? `${animal.name} blev matad: ${new Date(animal.lastFed).toLocaleString()}`
+          : `${animal.name} är inte matad ännu`}
       </p>
       <button
         onClick={feedAnimal}
         disabled={animal.isFed}
+        className="bg-green-700 text-white font bold rounded disabled:bg-gray-400"
       >
-        Mata djur
+        Klicka för att mata {animal.name}
       </button>
     </article>
   );

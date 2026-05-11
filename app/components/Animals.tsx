@@ -7,7 +7,7 @@ type AnimalProps = {
 
 export const Animals = ({ animals }: AnimalProps) => {
   return (
-    <section>
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {animals.map((animal) => (
         <article key={animal.id}>
           <AminalCard animal={animal} key={animal.id} />
